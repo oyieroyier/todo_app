@@ -6,12 +6,12 @@ class TodosController < ApplicationController
   def create
     todo = user.todos.create(todo_params)
     if todo.valid?
-      app_response(status: :created, data: :todo)
+      app_response(status: :created, data: todo)
     else
       app_response(
         message: 'Failed',
         status: :unprocessable_entity,
-        data: :todo.errors.add,
+        data: todo.errors
       )
     end
   end

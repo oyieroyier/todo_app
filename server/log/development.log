@@ -598,3 +598,90 @@ Processing by TodosController#create as */*
 Completed 422 Unprocessable Entity in 111ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 58596)
 
 
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:27:49 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77d40171d0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 40ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1444)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:29:46 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;ad", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;ad", "priority"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77e4b90e48>, params: {"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;ad", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;ad", "priority"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTodo Create (3.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Break Time"], ["description", "7.5 minute break nadnndald adk;ad"], ["status", 0], ["priority", 2], ["user_id", 1], ["created_at", "2023-03-23 10:29:46.706229"], ["updated_at", "2023-03-23 10:29:46.706229"]]
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+Completed 201 Created in 84ms (Views: 0.3ms | ActiveRecord: 18.4ms | Allocations: 3007)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:30:30 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;asd", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;asd", "priority"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77cc0a94e8>, params: {"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;asd", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break nadnndald adk;asd", "priority"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Break Time"], ["description", "7.5 minute break nadnndald adk;asd"], ["status", 0], ["priority", 2], ["user_id", 1], ["created_at", "2023-03-23 10:30:30.781628"], ["updated_at", "2023-03-23 10:30:30.781628"]]
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+Completed 201 Created in 66ms (Views: 0.3ms | ActiveRecord: 22.6ms | Allocations: 8122)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:30:47 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77d000a1c8>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 30ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1310)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:31:23 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77e1073900>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 41ms (Views: 10.4ms | ActiveRecord: 2.0ms | Allocations: 8064)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:31:36 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break starting now", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break starting now", "priority"=>2}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77d4027ad0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break starting now", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break starting now", "priority"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTodo Create (11.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Break Time"], ["description", "7.5 minute break starting now"], ["status", 0], ["priority", 2], ["user_id", 1], ["created_at", "2023-03-23 10:31:36.361211"], ["updated_at", "2023-03-23 10:31:36.361211"]]
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+Completed 201 Created in 46ms (Views: 0.2ms | ActiveRecord: 31.0ms | Allocations: 2870)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:32:18 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break starting now again", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break starting now again", "priority"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77d810ddb0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break starting now again", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break starting now again", "priority"=>2}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Break Time"], ["description", "7.5 minute break starting now again"], ["status", 0], ["priority", 2], ["user_id", 1], ["created_at", "2023-03-23 10:32:18.393376"], ["updated_at", "2023-03-23 10:32:18.393376"]]
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:7:in `create'
+Completed 201 Created in 55ms (Views: 1.1ms | ActiveRecord: 17.5ms | Allocations: 8186)
+
+
