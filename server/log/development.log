@@ -311,3 +311,290 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:53:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7647dd130>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7647dd130>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 461)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (missing value for :uername in username = :uername OR email = :email):
+  
+app/controllers/users_controller.rb:25:in `login'
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:54:36 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x0000555df7233d90>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x0000555df7233d90>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'saa' OR email = 'maol@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+Completed 401 Unauthorized in 29ms (Views: 2.3ms | ActiveRecord: 2.6ms | Allocations: 1382)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:54:47 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7580f2570>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7580f2570>, params: {"username"=>"saa", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"saa", "email"=>"maol@google.com"}} }[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'saa' OR email = 'maol@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+Completed 401 Unauthorized in 19ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 916)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:55:53 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7580c8f40>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7580c8f40>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'maol@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe7580c8f40>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+Completed 401 Unauthorized in 398ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 17355)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:56:20 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c154488>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c154488>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'maol@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c154488>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+Completed 401 Unauthorized in 308ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1095)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:56:25 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0f6e78>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0f6e78>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'maol@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0f6e78>, params: {"username"=>"oyier", "email"=>"maol@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"maol@google.com"}} }[0m
+Completed 401 Unauthorized in 294ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1084)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:56:50 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0b4d20>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0b4d20>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'mail@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c0b4d20>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+Completed 401 Unauthorized in 346ms (Views: 1.1ms | ActiveRecord: 1.9ms | Allocations: 1084)
+
+
+Started GET "/users/login/" for 127.0.0.1 at 2023-03-23 11:57:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/login"):
+  
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:57:04 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c008e30>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c008e30>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'mail@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe75c008e30>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+Completed 401 Unauthorized in 295ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1083)
+
+
+Started POST "/users/login/" for 127.0.0.1 at 2023-03-23 11:59:42 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe764d99498>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe764d99498>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'mail@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe764d99498>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+Completed 401 Unauthorized in 358ms (Views: 0.5ms | ActiveRecord: 12.8ms | Allocations: 2628)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-03-23 12:24:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users/login" for 127.0.0.1 at 2023-03-23 12:24:35 +0300
+Processing by UsersController#login as */*
+  Parameters: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe74c902af0>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe74c902af0>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'oyier' OR email = 'mail@google.com') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `login'
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: login, request: #<ActionDispatch::Request:0x00007fe74c902af0>, params: {"username"=>"oyier", "email"=>"mail@google.com", "password"=>"[FILTERED]", "controller"=>"users", "action"=>"login", "user"=>{"username"=>"oyier", "email"=>"mail@google.com"}} }[0m
+Completed 200 OK in 318ms (Views: 3.1ms | ActiveRecord: 6.2ms | Allocations: 2793)
+
+
+Started GET "/todos" for 127.0.0.1 at 2023-03-23 12:25:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:27:24 +0300
+  
+NoMethodError (undefined method `to_sym' for {:length=>{:minimum=>5, :maximum=>20}}:Hash
+Did you mean?  to_s
+               to_set):
+  
+app/models/todo.rb:7:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:28:29 +0300
+  
+ArgumentError (You tried to define an enum named "status" on the model "Todo", but this will generate a instance method "CREATED?", which is already defined by another enum.):
+  
+app/models/todo.rb:4:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "title": "Break Time",
+    "description": "7.5 minute break",
+}
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:29:06 +0300
+  
+ArgumentError (You tried to define an enum named "status" on the model "Todo", but this will generate a instance method "CREATED?", which is already defined by another enum.):
+  
+app/models/todo.rb:4:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:30:45 +0300
+  
+ArgumentError (You tried to define an enum named "status" on the model "Todo", but this will generate a instance method "CREATED?", which is already defined by another enum.):
+  
+app/models/todo.rb:4:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:37:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `to_sym' for {:length=>{:minimum=>5, :maximum=>20}}:Hash
+Did you mean?  to_s
+               to_set):
+  
+app/models/todo.rb:7:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:40:24 +0300
+  
+NoMethodError (undefined method `to_sym' for {:length=>{:minimum=>20}}:Hash
+Did you mean?  to_s
+               to_set):
+  
+app/models/todo.rb:8:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:41:19 +0300
+  
+NoMethodError (undefined method `to_sym' for {:length=>{:minimum=>20}}:Hash
+Did you mean?  to_s
+               to_set):
+  
+app/models/todo.rb:8:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:42:06 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>9, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>9}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d4b37c68>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>9, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>9}} }[0m
+Completed 422 Unprocessable Entity in 150ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 57302)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:42:14 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>10, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>10}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d500f8d0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>10, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>10}} }[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 947)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:42:23 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d4f66988>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 71ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 3504)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:42:30 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d8e27730>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}} }[0m
+Completed 422 Unprocessable Entity in 16ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1318)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:43:44 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d4b286f0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}} }[0m
+Completed 422 Unprocessable Entity in 78ms (Views: 0.4ms | ActiveRecord: 3.5ms | Allocations: 6573)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:46:54 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d8b766a8>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>1}} }[0m
+Completed 422 Unprocessable Entity in 68ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 6526)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:47:02 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f72d8e28fe0>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}} }[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1286)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 12:47:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f3fd8b3ed80>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}} }[0m
+Completed 422 Unprocessable Entity in 171ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 58608)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:09:54 +0300
+  
+NoMethodError (undefined method `destroy' for #<ActionDispatch::Routing::Mapper:0x00007f3fdce02cc0>):
+  
+config/routes.rb:13:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:10:23 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f3fd8b5eba8>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>0}} }[0m
+Completed 422 Unprocessable Entity in 40ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 6043)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:10:34 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f3fdca89008>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 17ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1298)
+
+
+Started POST "/todos" for 127.0.0.1 at 2023-03-23 13:10:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:36:in `user'
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007f77e0bb6728>, params: {"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2, "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"Break Time", "description"=>"7.5 minute break", "priority"=>2}} }[0m
+Completed 422 Unprocessable Entity in 111ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 58596)
+
+

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def register
     user = User.create!(user_params)
     if user.valid?
+      save_user(user.id)
       app_response(
         message: 'Registration successful',
         status: :created,
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def login
-    sql = 'username = :uername OR email = :email'
+    sql = 'username = :username OR email = :email'
 
     user =
       User.where(
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
       ).first
 
     if user&.authenticate(user_params[:password])
-      save_user(id: user.id)
+      save_user(user.id)
       app_response(message: 'Login successful', status: :ok, data: user)
     else
       app_response(
