@@ -1,6 +1,6 @@
 import React from 'react';
 import { RiLockPasswordLine, RiUser3Line } from 'react-icons/ri';
-import IMAGES from '../../images/Images';
+import { Link } from 'react-router-dom';
 
 const LoginForm = ({ message }) => {
 	return (
@@ -28,7 +28,7 @@ const LoginForm = ({ message }) => {
 						</fieldset>
 					</form>
 					<p>
-						New member? <a href="/signup">Sign up here</a>
+						New member? <Link to="/signup">Sign up here</Link>
 					</p>
 				</div>
 				{/* <div className="form-image">
