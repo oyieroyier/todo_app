@@ -1,0 +1,84 @@
+{
+	"posts": [
+		{
+			"userId": 1,
+			"id": 1,
+			"title": "React Login Page",
+			"description": "Build React Login page with a username and password input areas.",
+			"status": "COMPLETE",
+			"priority": "HIGH"
+		},
+		{
+			"userId": 1,
+			"id": 2,
+			"title": "React Signup Page",
+			"description": "Build React Signup page with a username, email and password input areas.",
+			"status": "CANCELED",
+			"priority": "LOW"
+		},
+		{
+			"userId": 1,
+			"id": 3,
+			"title": "React Navbar Component",
+			"description": "Build React Navbar component with a Login button, Signup button and an 'Add Todo' button.",
+			"status": "CANCELED",
+			"priority": "HIGH"
+		},
+		{
+			"userId": 1,
+			"id": 4,
+			"title": "Rails Login Endpoint",
+			"description": "Build the Rails Login endpoint with the route '/login' and a POST request.",
+			"status": "CREATED",
+			"priority": "HIGH"
+		},
+		{
+			"userId": 1,
+			"id": 5,
+			"title": "Rails Signup Endpoint",
+			"description": "Build the Rails Signup endpoint with the route '/signup' and a POST request.",
+			"status": "IN PROGRESS",
+			"priority": "HIGH"
+		},
+		{
+			"userId": 1,
+			"id": 6,
+			"title": "Rails fetch Todos Endpoint",
+			"description": "Build the Rails Todos endpoint. TYhis endpoint displays all the user's todos.",
+			"status": "IN PROGRESS",
+			"priority": "MEDIUM"
+		},
+		{
+			"userId": 1,
+			"id": 7,
+			"title": "Write Client-side README.md",
+			"description": "Write the client-side README.md documentation. This documentation covers how to use the React application.",
+			"status": "CREATED",
+			"priority": "LOW"
+		},
+		{
+			"userId": 1,
+			"id": 8,
+			"title": "Write Server-side README.md",
+			"description": "Write the server-side README.md documentation. This documentation covers how I went about writing the server-side API",
+			"status": "COMPLETE",
+			"priority": "HIGH"
+		},
+		{
+			"userId": 1,
+			"id": 9,
+			"title": "Deployment",
+			"description": "Deploy the frontend application on Vercel and the backend API on Render.",
+			"status": "CREATED",
+			"priority": "MEDIUM"
+		},
+		{
+			"userId": 1,
+			"id": 10,
+			"title": "CI/CD",
+			"description": "Continuous integration and continuous delivery/deployment. Ian Okumu (STM) will lead this session on Monday.",
+			"status": "COMPLETE",
+			"priority": "HIGH"
+		}
+	]
+}

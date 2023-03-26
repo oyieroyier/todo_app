@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Todos
   post '/todos', to: 'todos#create'
-  patch '/todos:id', to: 'todos#update'
-  delete '/todos:id', to: 'todos#destroy'
+  patch '/todos/:id', to: 'todos#update'
+  delete '/todos/:id', to: 'todos#destroy'
   get '/todos', to: 'todos#index'
 end

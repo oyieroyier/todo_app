@@ -1,7 +1,9 @@
-@import './add_task', './modal', './login-and-signup';
+@import './add_task', './modal', './login-and-signup', './navbar', './todo';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&family=Lilita+One&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+

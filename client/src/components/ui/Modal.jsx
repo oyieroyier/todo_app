@@ -9,9 +9,8 @@ const Modal = ({ setIsOpen }) => {
 			<div className="darkBG" />
 			<div className="centered">
 				<div className="modal">
-					<div className="modalHeader">
-						<h3 className="heading">ADD NEW TASK</h3>
-					</div>
+					{/* <div className="modalHeader">
+					</div> */}
 					<button className="closeBtn" onClick={() => setIsOpen(false)}>
 						<RiCloseLine style={{ marginBottom: '-3px' }} />
 					</button>

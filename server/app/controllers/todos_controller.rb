@@ -11,7 +11,7 @@ class TodosController < ApplicationController
       app_response(
         message: 'Failed',
         status: :unprocessable_entity,
-        data: todo.errors
+        data: todo.errors,
       )
     end
   end

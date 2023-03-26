@@ -1,25 +1,27 @@
 .add-task-form {
-	// background-color: pink;
-	// height: 20rem;
-
 	.form-input {
-		// width: 60%;
 		margin: auto;
 
 		label {
 			display: block;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+				'Lucida Sans', Arial, sans-serif;
 		}
 	}
 
 	input {
-		height: 2rem;
 		margin: 1rem;
 		width: 70%;
+		border-radius: 0.5rem;
+		outline: none;
+		padding: 5px;
 	}
 
 	textarea {
 		@extend input;
 		height: 4rem;
+		resize: none;
+		padding: 0.5rem;
 	}
 }
 
@@ -27,21 +29,25 @@
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
+	margin-bottom: 10px;
 
 	label {
 		font-size: 1rem;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	}
 }
 
 .form-priority {
+	padding: 1rem;
 	label {
 		font-size: 1.5rem;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		padding: 1rem;
 	}
 
-	input {
-		padding: 1rem;
+	select {
+		padding: 0.5rem;
+		border-radius: 0.5rem;
 	}
 }
 
