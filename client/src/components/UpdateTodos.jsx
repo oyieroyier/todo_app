@@ -1,8 +1,9 @@
 import React from 'react';
 import { RiCloseLine } from 'react-icons/ri';
-import AddToDo from '../AddToDo';
+import UpdateForm from './UpdateForm';
+// import AddToDo from '../AddToDo';
 
-const Modal = ({ setIsOpen }) => {
+const UpdateTodos = ({ setIsOpen }) => {
 	return (
 		<>
 			<div className="darkBG" />
@@ -11,12 +12,9 @@ const Modal = ({ setIsOpen }) => {
 					<button className="closeBtn" onClick={() => setIsOpen(false)}>
 						<RiCloseLine style={{ marginBottom: '-3px' }} />
 					</button>
-					<div className="modalContent">
-						<AddToDo />
-					</div>
+					<div className="modalContent">{<UpdateForm />}</div>
 					<div className="modalActions">
-						<div className="actionsContainer">
-						</div>
+						<div className="actionsContainer"></div>
 					</div>
 				</div>
 			</div>
@@ -24,4 +22,4 @@ const Modal = ({ setIsOpen }) => {
 	);
 };
 
-export default Modal;
+export default UpdateTodos;

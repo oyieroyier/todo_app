@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TodoDetails from '../Todos/TodoDetails';
+import UpdateTodos from '../../components/UpdateTodos';
 
 const Main = () => {
 	const todoStatusBackgroundColors = {
@@ -23,9 +24,10 @@ const Main = () => {
 	};
 
 	const [todos, setTodos] = useState([]);
+	const [isOpen, setIsOpen] = useState(false)
 
 	useEffect(() => {
-		fetch('http://localhost:8000/posts')
+		fetch('https://todos-dummy-data.vercel.app/posts')
 			.then((r) => r.json())
 			.then((todos) => setTodos(todos));
 	}, []);
@@ -34,10 +36,8 @@ const Main = () => {
 		<div className="todo-cont">
 			{todos.map((todo) => (
 				<div key={todo.id} className="todo">
-					{/* <Link to={<TodoDetails />}> */}
-						<h4>{todo.title}</h4>
-						<p>{todo.description}</p>
-					{/* </Link> */}
+					<h4>{todo.title}</h4>
+					<p>{todo.description}</p>
 					<h5
 						style={{
 							backgroundColor: todoStatusBackgroundColors[todo.status],
@@ -56,11 +56,12 @@ const Main = () => {
 						{todo.priority}
 					</h5>
 					<div className="todo-buttons">
-						<button>UPDATE</button>
+						<button onClick={() => setIsOpen(true)}>UPDATE</button>
 						<button>DELETE</button>
 					</div>
 				</div>
 			))}
+			{isOpen && <UpdateTodos setIsOpen={setIsOpen} />}
 		</div>
 	);
 };

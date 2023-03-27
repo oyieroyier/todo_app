@@ -1,5 +1,5 @@
 const IMAGES = {
-	image1: new URL('./blackboard.jpg', import.meta.url).href,
+	image1: new URL('./todos.png', import.meta.url).href,
 };
 
 export default IMAGES;
