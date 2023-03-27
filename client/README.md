@@ -4,12 +4,12 @@ Todo React App
 Table of Contents
 -----------------
 
-1.  [Requirements](https://chat.openai.com/chat#requirements)
-2.  [Pre-requisites](https://chat.openai.com/chat#pre-requisites)
-3.  [Project Setup](https://chat.openai.com/chat#project-setup)
-4.  [User Stories](https://chat.openai.com/chat#user-stories)
-5.  [Authors](https://chat.openai.com/chat#authors)
-6.  [License](https://chat.openai.com/chat#license)
+1.  [Requirements](#requirements)
+2.  [Pre-requisites](#pre-requisites)
+3.  [Project Setup](#project-setup)
+4.  [User Stories](#user-stories)
+5.  [Authors](#authors)
+6.  [License](#license)
 
 Requirements
 ------------
