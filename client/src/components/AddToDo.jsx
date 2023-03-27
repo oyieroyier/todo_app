@@ -7,6 +7,7 @@ const AddToDo = () => {
 	const [description, setDescription] = useState('');
 	const [status, setStatus] = useState([]);
 	const [priority, setPriority] = useState([]);
+	const [errors, setErrors] = useState([]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -17,17 +18,17 @@ const AddToDo = () => {
 			priority,
 		};
 
-		fetch('http://localhost:3000/todos', {
+		fetch('https://todos-dummy-data.vercel.app/posts', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(todo),
 		})
 			.then((res) => {
 				if (res.ok) {
-					return res.json();
+					return res.json().then(todo => setTodos());
 				} else {
-					console.log(res);
-					throw Error('Response from this resource has a problem: ');
+					console.log(res)
+					// res.json().then((e) => console.log(Object.entries(e.error).flat()));
 				}
 			})
 			.then((data) => console.log(data))

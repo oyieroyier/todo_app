@@ -79,6 +79,13 @@
 					color: #f5e8e8;
 				}
 			}
+
+			.del-btn{
+					&:hover{
+						background-color: red;
+						color: black;
+					}
+				}
 		}
 	}
 }

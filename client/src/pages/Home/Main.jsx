@@ -57,7 +57,7 @@ const Main = () => {
 					</h5>
 					<div className="todo-buttons">
 						<button onClick={() => setIsOpen(true)}>UPDATE</button>
-						<button>DELETE</button>
+						<button className='del-btn'>DELETE</button>
 					</div>
 				</div>
 			))}
